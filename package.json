@@ -1,0 +1,14 @@
+
+{
+  "name": "profile-viewer",
+  "version": "1.0.0",
+  "description": "Sistema de perfil com visualizações",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "pg": "^8.11.3"
+  }
+}

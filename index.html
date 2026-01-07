@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil - thzz</title>
+  <link rel="stylesheet" href="CSS/styles.css" />
+  <link rel="shortcut icon" href="IMGS/flaviicons/favicon.png" type="image/x-icon">
+</head>
+<body>
+  <!-- Tela de entrada -->
+  <div class="entry-screen" id="entryScreen">
+    <div class="entry-content">
+      <h1> boa quebrada - da um cliq ai </h1>
+    </div>
+  </div>
+
+  <!-- Conteúdo principal -->
+  <div class="main-content" id="mainContent">
+    <video autoplay muted loop id="bg-video">
+      <source src="IMGS/media/lv_0_20250608120551.mp4" type="video/mp4">
+      Seu navegador não suporta vídeos HTML5.
+    </video>
+    <audio id="bgAudio" loop>
+      <source src="IMGS/media/picota.mp4" type="audio/mpeg">
+    </audio>
+
+    <div class="overlay"></div>
+
+    <div class="profile-card">
+      <!-- Mensagem acima do avatar -->
+      <div class="top-message">
+        <p>"Abençoado por Deus, guiado pelos anjos."</p>
+      </div>
+
+      <!-- Avatar -->
+      <div class="avatar">
+        <img src="IMGS/frases.jpg" alt="Avatar do usuário" />
+      </div>
+
+      <div class="info">
+        <div class="top">
+          <h1>thzzzk</h1>
+          <!-- Insígnias clicáveis -->
+          <div class="badges-container">
+            <div class="badges">
+              <img src="IMGS/icons/impulso.png" alt="Impulso" title="Impulso" />
+              <img src="IMGS/icons/dev.png" alt="Dev" title="Desenvolvedor" />
+              <img src="IMGS/icons/nitro.png" alt="Nitro" title="Nitro" />
+              <img src="IMGS/icons/quest.png" alt="Quest" title="Quest" />
+            </div>
+          </div>
+        </div>
+
+        <div class="bio" id="typewriterText"></div>
+
+        <!-- Seção GitHub -->
+        <div class="github-section">
+          <div class="github-avatar">
+            <img src="IMGS/icons/quebrada.jpg" alt="GitHub Avatar" />
+          </div>
+          <div class="github-info">
+            <span class="github-name">vinizzzk</span>
+            <div class="github-stats">
+              <span><img src="IMGS/flaviicons/do-utilizador.png" alt="Seguidores" class="stat-icon"> 0 Seguidores</span>
+              <span><img src="IMGS/flaviicons/envelope.png" alt="Repositórios" class="stat-icon"> 0 Repos</span>
+            </div>
+            <button class="github-btn" onclick="window.open('https://github.com/vinizzzk', '_blank')">Ver Perfil</button>
+          </div>
+          <div class="github-link">
+            <img src="IMGS/flaviicons/github.png" alt="GitHub" />
+            <span>GitHub</span>
+          </div>
+        </div>
+
+        <!-- Links sociais -->
+        <div class="social-links">
+          <a href="https://discord.gg/VTp4jqwwhj" target="_blank">
+            <img src="IMGS/icons/discord.png" alt="Discord" title="Discord" />
+          </a>
+          <a href="https://open.spotify.com/playlist/1c4roHifFJ4IgvidZL7Pcs" target="_blank">
+            <img src="IMGS/icons/spotify.png" alt="Spotify" title="Spotify" />
+          </a>
+        </div>
+      </div>
+
+      <!-- Visualizações -->
+      <div class="views">
+        <img src="IMGS/flaviicons/olho.png" alt="Visualizações" class="view-icon">
+        <span id="viewCount">0</span>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

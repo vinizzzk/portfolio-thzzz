@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #111;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+/* Tela de entrada */
+.entry-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+
+.entry-content h1 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+/* Conteúdo principal */
+.main-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.main-content.visible {
+  opacity: 1;
+}
+
+.profile-card {
+  background: rgba(20, 20, 20, 0.3);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+  padding: 40px;
+  width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(50px);
+  animation: slideUp 1.5s ease-out forwards;
+}
+
+@keyframes slideUp {
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Mensagem acima do avatar */
+.top-message {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #B4908E;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 2s ease-in-out 0.3s both;
+}
+
+/* Avatar */
+.avatar {
+  margin-bottom: 20px;
+  animation: fadeIn 2s ease-in-out 0.5s both;
+}
+
+.avatar img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Info */
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  animation: fadeIn 2s ease-in-out 1s both;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.top h1 {
+  font-size: 26px;
+  color: #fff;
+}
+
+/* Badges */
+.badges-container {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 8px 12px;
+  border-radius: 12px;
+  display: inline-block;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+.badges {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.badges img {
+  height: 20px;
+  filter: brightness(0) invert(1) drop-shadow(0 0 8px #ffffff);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.badges img:hover {
+  transform: scale(1.2);
+  filter: brightness(0) invert(1) drop-shadow(0 0 15px #ffffff);
+}
+
+/* Bio */
+.bio {
+  font-size: 18px;
+  color: #aaa;
+  text-align: center;
+  margin-bottom: 20px;
+  min-height: 25px;
+  border-right: 2px solid #fff;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* Seção GitHub */
+.github-section {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  padding: 15px;
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 2s ease-in-out 1.5s both;
+}
+
+.github-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.github-info {
+  flex: 1;
+}
+
+.github-name {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  display: block;
+}
+
+.github-stats {
+  color: #aaa;
+  font-size: 12px;
+  margin-top: 5px;
+  display: flex;
+  gap: 10px;
+}
+
+.stat-icon {
+  width: 12px;
+  height: 12px;
+  filter: brightness(0.7);
+  margin-right: 4px;
+  vertical-align: middle;
+}
+
+.github-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.github-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #aaa;
+  font-size: 12px;
+  gap: 5px;
+}
+
+.github-link img {
+  width: 20px;
+  filter: brightness(0.7);
+}
+
+/* Links sociais */
+.social-links {
+  display: flex;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 15px 30px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 2s ease-in-out 2s both;
+}
+
+.social-links img {
+  width: 28px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 8px;
+}
+
+.social-links img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Visualizações */
+.views {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #ccc;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  animation: fadeIn 2s ease-in-out 0.5s both;
+}
+
+.view-icon {
+  width: 16px;
+  height: 16px;
+  filter: brightness(0.8);
+}
+
+/* Vídeo e overlay */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 10, 10, 0.5);
+  z-index: -1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Efeito de entrada oculto */
+.entry-screen.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-out;
+}
